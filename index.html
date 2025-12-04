@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Multimedia - Bases de Datos y Gamificación</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header con menú navegable -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-database"></i>
+                    <span>Examen Multimedia</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#gamificacion">Gamificación</a></li>
+                        <li><a href="#infografia">Bases de Datos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Sección Bienvenida -->
+        <section id="inicio" class="welcome">
+            <div class="container">
+                <div class="welcome-content">
+                    <article class="welcome-text">
+                        <h1>Generación de Contenidos Multimedia</h1>
+                        <p>Este sitio web ha sido desarrollado como parte del examen parcial de la asignatura "Generación de Contenido Multimedia" de la Universidad Modular Abierta.</p>
+                        <p>Demostración de habilidades en HTML5, CSS3, integración multimedia y gamificación aplicada al aprendizaje sobre bases de datos.</p>
+                    </article>
+                    <figure class="video-container">
+                        <!-- Video explicativo sobre bases de datos -->
+                        <video controls poster="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+                            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.ogv" type="video/ogg">
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                        <figcaption>Video introductorio sobre bases de datos</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Gamificación -->
+        <section id="gamificacion" class="gamification">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Gamificación</h2>
+                </div>
+                <div class="game-container">
+                    <div class="game-title">
+                        <h3>Juego del Ahorcado - Términos de Bases de Datos</h3>
+                        <p>Adivina la palabra relacionada con bases de datos</p>
+                    </div>
+                    
+                    <div class="hangman-figure" id="hangmanFigure">
+                        🧠
+                    </div>
+                    
+                    <div class="hangman-display" id="wordDisplay">
+                        _ _ _ _ _ _ _
+                    </div>
+                    
+                    <div class="game-info">
+                        <p>Intentos restantes: <span id="attempts">7</span></p>
+                        <p>Letras usadas: <span id="usedLetters"></span></p>
+                    </div>
+                    
+                    <div class="keyboard" id="keyboard">
+                        <!-- Las letras se generarán con JavaScript -->
+                    </div>
+                    
+                    <div class="game-controls">
+                        <button class="btn" id="hintBtn">Pista</button>
+                        <button class="btn" id="resetBtn">Reiniciar Juego</button>
+                    </div>
+                    
+                    <div id="message"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Infografía Bases de Datos -->
+        <section id="infografia" class="infografia-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>El Mundo de las Bases de Datos</h2>
+                </div>
+                <div class="infografia-container">
+                    <div class="infografia-title">
+                        <h3>Infografía Digital - Conceptos Fundamentales</h3>
+                    </div>
+                    
+                    <div class="infografia-content">
+                        <article class="infografia-item">
+                            <h3><i class="fas fa-database"></i> ¿Qué es una Base de Datos?</h3>
+                            <p>Una base de datos es un conjunto organizado de datos estructurados que se almacenan electrónicamente en un sistema informático. Permite la gestión, actualización y consulta eficiente de información.</p>
+                        </article>
+                        
+                        <article class="infografia-item">
+                            <h3><i class="fas fa-project-diagram"></i> Tipos de Bases de Datos</h3>
+                            <ul>
+                                <li><strong>Relacionales:</strong> MySQL, PostgreSQL, Oracle</li>
+                                <li><strong>NoSQL:</strong> MongoDB, Cassandra, Redis</li>
+                                <li><strong>Orientadas a objetos:</strong> db4o, Versant</li>
+                                <li><strong>Distribuidas:</strong> Google Spanner, Cassandra</li>
+                            </ul>
+                        </article>
+                        
+                        <article class="infografia-item">
+                            <h3><i class="fas fa-sitemap"></i> Modelo Relacional</h3>
+                            <p>Organiza los datos en tablas (relaciones) compuestas por filas (tuplas) y columnas (atributos). Utiliza claves primarias y foráneas para establecer relaciones entre tablas.</p>
+                        </article>
+                        
+                        <article class="infografia-item">
+                            <h3><i class="fas fa-code"></i> SQL vs NoSQL</h3>
+                            <p><strong>SQL:</strong> Lenguaje estructurado para bases de datos relacionales. Esquema fijo, transacciones ACID.</p>
+                            <p><strong>NoSQL:</strong> Bases de datos no relacionales. Escalabilidad horizontal, esquema flexible, alto rendimiento.</p>
+                        </article>
+                        
+                        <article class="infografia-item">
+                            <h3><i class="fas fa-server"></i> Motores más Utilizados</h3>
+                            <ul>
+                                <li><strong>MySQL:</strong> Open source, amplia adopción</li>
+                                <li><strong>PostgreSQL:</strong> Avanzado, compliant con SQL</li>
+                                <li><strong>SQL Server:</strong> Microsoft, integración con .NET</li>
+                                <li><strong>MongoDB:</strong> NoSQL, documentos JSON</li>
+                                <li><strong>Oracle:</strong> Empresarial, alto rendimiento</li>
+                            </ul>
+                        </article>
+                        
+                        <article class="infografia-item">
+                            <h3><i class="fas fa-recycle"></i> Ciclo de Vida de una BD</h3>
+                            <ol>
+                                <li>Planificación y análisis</li>
+                                <li>Diseño conceptual y lógico</li>
+                                <li>Implementación física</li>
+                                <li>Pruebas y carga de datos</li>
+                                <li>Operación y mantenimiento</li>
+                            </ol>
+                        </article>
+                    </div>
+                    
+                    <!-- Representación visual de la infografía -->
+                    <figure class="infografia-visual">
+                        <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                             alt="Infografía visual sobre bases de datos">
+                        <figcaption>Representación visual de conceptos de bases de datos</figcaption>
+                    </figure>
+                    
+                    <!-- Audio explicativo adicional -->
+                    <article class="audio-explicativo">
+                        <h3><i class="fas fa-volume-up"></i> Audio Explicativo: Introducción a las Bases de Datos</h3>
+                        <audio controls>
+                            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                        <p>Audio de ejemplo sobre conceptos básicos de bases de datos.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Examen Multimedia</h3>
+                    <p>Proyecto desarrollado para la evaluación del tercer parcial de la asignatura "Generación de Contenido Multimedia".</p>
+                    <p>Universidad Modular Abierta<br>Facultad de Ciencias Económicas<br>Ciclo 02/2025</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Información del Estudiante</h3>
+                    <p><strong>Estudiante:</strong> [Nombre Completo]</p>
+                    <p><strong>Carné:</strong> [Número de Carné]</p>
+                    <p><strong>Carrera:</strong> [Nombre de la Carrera]</p>
+                    <p><strong>Fecha:</strong> [Fecha de Entrega]</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Redes Sociales</h3>
+                    <p>Síguenos en nuestras redes sociales para más información:</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Examen Multimedia - Generación de Contenidos. Todos los derechos reservados.</p>
+                <p>Este sitio ha sido desarrollado con HTML5, CSS3 y JavaScript como parte de una evaluación académica.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

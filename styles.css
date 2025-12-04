@@ -1,0 +1,475 @@
+:root {
+    --primary: #2c3e50;
+    --secondary: #3498db;
+    --accent: #e74c3c;
+    --light: #ecf0f1;
+    --dark: #1a252f;
+    --text: #2c3e50;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, nav {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: var(--primary);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .logo {
+        margin-bottom: 0;
+    }
+}
+
+.logo i {
+    color: var(--secondary);
+    margin-right: 10px;
+}
+
+/* Navegación */
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    background-color: var(--secondary);
+}
+
+/* Secciones principales */
+section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+    color: var(--primary);
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--secondary);
+}
+
+/* Bienvenida */
+.welcome {
+    background: linear-gradient(135deg, var(--light) 0%, #ffffff 100%);
+}
+
+.welcome-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+@media (min-width: 992px) {
+    .welcome-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.welcome-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+}
+
+.welcome-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Video */
+.video-container {
+    background: var(--dark);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.video-container video {
+    width: 100%;
+    display: block;
+}
+
+.video-container figcaption {
+    padding: 10px;
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Gamificación - Juego del Ahorcado */
+.game-container {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.game-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+}
+
+.game-title h3 {
+    margin-bottom: 0.5rem;
+}
+
+.hangman-display {
+    text-align: center;
+    font-size: 2rem;
+    margin: 1.5rem 0;
+    min-height: 60px;
+    letter-spacing: 10px;
+    font-weight: bold;
+}
+
+.hangman-figure {
+    text-align: center;
+    font-size: 3rem;
+    margin: 1rem 0;
+    height: 120px;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    gap: 10px;
+    margin: 2rem 0;
+}
+
+.key {
+    background: var(--light);
+    border: 2px solid var(--secondary);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--transition);
+    user-select: none;
+}
+
+.key:hover {
+    background: var(--secondary);
+    color: white;
+}
+
+.key.used {
+    background: #bdc3c7;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.game-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--secondary);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+#message {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bold;
+    min-height: 24px;
+}
+
+/* Infografía */
+.infografia-section {
+    background-color: var(--light);
+}
+
+.infografia-container {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.infografia-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary);
+}
+
+.infografia-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .infografia-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.infografia-item {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--secondary);
+}
+
+.infografia-item h3 {
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.infografia-item h3 i {
+    margin-right: 10px;
+    color: var(--secondary);
+}
+
+.infografia-item ul, .infografia-item ol {
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.infografia-item li {
+    margin-bottom: 0.5rem;
+}
+
+.infografia-visual {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.infografia-visual img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.infografia-visual figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #666;
+}
+
+.audio-explicativo {
+    margin-top: 2rem;
+    background: #f0f7ff;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.audio-explicativo h3 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.audio-explicativo h3 i {
+    margin-right: 10px;
+}
+
+.audio-explicativo audio {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.audio-explicativo p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark);
+    color: white;
+    padding: 3rem 0 1.5rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.footer-section h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.footer-section p {
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.3rem;
+    transition: var(--transition);
+}
+
+.social-icons a:hover {
+    color: var(--secondary);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+    
+    .welcome-text h1 {
+        font-size: 2rem;
+    }
+    
+    .game-container {
+        padding: 1rem;
+    }
+    
+    .keyboard {
+        grid-template-columns: repeat(7, 1fr);
+    }
+    
+    .key {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+    
+    .game-info {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .hangman-display {
+        font-size: 1.5rem;
+        letter-spacing: 5px;
+    }
+}
